@@ -26,6 +26,7 @@ VOLUME ${PATH_SERVER}
 WORKDIR /home/${USER_NAME}
     
 COPY --chown=${USER_NAME}:${USER_NAME} scripts/entrypoint.sh /home/${USER_NAME}/entrypoint.sh
+COPY --chown=${USER_NAME}:${USER_NAME} server.cfg.tpl /home/${USER_NAME}/server.cfg.tpl
 
 USER ${USER_NAME}
 
